@@ -1,0 +1,36 @@
+import java.util.Scanner;
+public class Main {
+public static void main(String args[])
+{
+	int n,k;
+	Scanner in=new Scanner(System.in);
+	n=in.nextInt();
+	k=in.nextInt();
+	int Array[]=new int[n];
+	for(int i=0;i<n;i++)
+	{
+		Array[i]=in.nextInt();
+	}
+	int temp=Array[k-1];
+	int count=0;
+	if(Array[0]<temp)
+	{
+		count=0;
+	}
+	
+	else
+	{
+		for(int i=0;i<n;i++)
+		{
+			if(Array[i]<temp)
+				break;
+			else
+				if(Array[i]>=temp&&Array[i]>0)
+			count++;
+		}
+	}
+	System.out.println(count);
+	in.close();
+	
+}
+}
